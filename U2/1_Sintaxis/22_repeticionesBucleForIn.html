@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Repeticiones. Bucle for in</title>
+  </head>
+
+  <body>
+    <script>
+      //Definimos un objeto animal
+      let animal = { nombre: "Lucky", tipo: "Hamster", raza: "Ruso", edad: 1 };
+
+      let prop;
+
+      for (prop in animal) {
+        alert(prop + ": " + animal[prop]);
+      }
+    </script>
+  </body>
+</html>

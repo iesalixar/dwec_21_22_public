@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // typeof
+      // let numero = 3;
+      //console.log(typeof numero);
+
+      //let cadena = "Hola";
+      // console.log(typeof cadena);
+
+      // undefined
+      let no_definida;
+      //console.log(typeof no_definida);
+
+      // Existe una variable global que se llama undefined. PRECISAMENTE
+
+      // if (no_definida === undefined) {
+      //   console.log("Es indefinida");
+      // }
+
+      // Comparar undefined con el resultado typeof NO TIENE SENTIDO
+      // if (typeof no_definida === undefined) {
+      //   console.log("No se ejecuta");
+      // }
+
+      // null
+      // let es_null = null;
+      // // if (es_null === null) {
+      // //   console.log("es_null efectivamente es null??");
+      // // }
+
+      // if (typeof es_null === "object") {
+      //   console.log("es_null es un objeto");
+      // }
+
+      // NaN
+      //console.log(Math.sqrt(-1));
+      //console.log(parseInt("no"));
+
+      // PROBLEMA 1 DE NaN
+      // let es_un_numero = parseInt("movidas");
+      // if (typeof es_un_numero === "number") {
+      //   console.log("Es un número...PERO NO");
+      //   console.log(es_un_numero);
+      // }
+
+      // if (isNaN(es_un_numero)) {
+      //   console.log("Ahora sí sabemos que es_un_numero NO ES UN NÚMERO");
+      // }
+
+      // PROBLEMA 2 DE NaN - No es una palabra reservada y
+      // podemos llamar a una variable local como NaN
+      function test() {
+        let otro_numero = 10;
+        let NaN = 10;
+        if (otro_numero === NaN) {
+          console.log("JIJIJI, LA ESTÁS LIANDO");
+        }
+      }
+
+      test(); /**/
+    </script>
+  </body>
+</html>
