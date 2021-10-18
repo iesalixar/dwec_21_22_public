@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Objetos nativos. String</title>
+  </head>
+
+  <body>
+    <script>
+      // Instanciación:
+      let daw = "Desarrollo de aplicaciones web";
+      let dam = "Desarrollo de aplicaciones multiplataforma";
+      let asir = "Administración de 'Sistemas Informáticos' en Red";
+      let smr = 'Sistemas "Microinformáticos" y Redes';
+      let ciclos = new String("");
+
+      // Concatenación de cadenas
+      ciclos += "Hay 3 ciclos de Grado Superior: \n";
+      ciclos += daw + ", " + dam + " y " + asir + "\n";
+      ciclos += " y 1 ciclo de Grado Medio: \n";
+      ciclos += smr;
+
+      console.log(ciclos);
+
+      // Propiedades
+      // length: devuelve la longitud de una cadena
+      console.log("La longitud de la cadena ciclos es: " + ciclos.length);
+
+      // Métodos:
+      // ========
+      // Búsqueda:
+      // charAt(<num>): devuelve el caracter de una posición.
+      console.log("El caracter 16 de la cadena ciclos es: " + ciclos.charAt(16));
+      // indexOf(<caracter>): devuelve la primera posición de un caracter en una cadena.
+      console.log(
+        "La primera aparición de la letra a en ciclos es: " +
+          ciclos.indexOf("z")
+      );
+      // lastIndexOf(<caracter>): devuelve la última posición de un caracter en una cadena.
+      console.log(
+        "La última aparición de la letra a en ciclos es: " +
+          ciclos.lastIndexOf("a")
+      );
+      // search(<cadena|expresión>): buscar una cadena o expresión regular en otra cadena.
+       console.log("Busca la cadena 'web' en la variable daw: " + daw.search("web"));
+      // match (<expresión regular>): busca una expresión regular en otra cadena.
+
+      // Comparación:
+      // localeCompare(<cadena>): devuelve -1 (antes), 0 (igual), 1 (después)
+      console.log("¿Es daw menor que dam? " + daw.localeCompare(dam));
+
+      // Incluye, empieza o termina
+      // includes(<cadena>): devuelve true si la cadena incluye el parámetro.
+      console.log("¿Incluye 'aplicaciones' daw? " + daw.includes("aplicaciones"));
+      // startsWith(<cadena>): devuelve true si la cadena empieza con el parámetro.
+      console.log(
+        "Empieza daw con la palabra 'aplicaciones'? " +
+          daw.startsWith("aplicaciones")
+      );
+      // endsWith(<cadena>): devuelve true si la cadena finaliza con el parámetro.
+      console.log(
+        "Acaba daw con la palabra 'aplicaciones'? " +
+          daw.endsWith("aplicaciones")
+      );
+
+      // Concatenación y repetición
+      // concat(<cadena>): concatena a la cadena el parámetro:
+      console.log("Concatena daw con dam \n" + daw.concat(dam));
+      //repeat(<número>): repetir la cadena el número de veces que aparece como parámetro
+      console.log("Repetir daw \n" + daw.repeat(3));
+
+      // Extracción
+      // slice(<posicion inicial>,<posicion final>): devuelve la cadena comprendida entre ambas posiciones:
+      console.log(
+        "La cadena que hay entre el 0 y el 1 en daw es: " + daw.slice(0, 1)
+      );
+      // substring(<posicion inicial>,<posicion final>): devuelve la cadena comprendida entre ambas posiciones:
+      console.log(
+        "La cadena que hay entre el 0 y el 1 en daw es: " + daw.substring(0, 1)
+      );
+      // substr(<posicion inicial>,<número de caracteres>): devuelve la cadena comprendida entre la posición inicial y el número de caracteres:
+      console.log(
+        "La cadena de 5 caracteres que hay a partir del caracter 7 es: " +
+          daw.substr(5, 7)
+      );
+      // split(<caracter>,[<número de veces]): divide la cadena en un array de subcadenas separadas por el caracter del primer parámetro
+      console.log("La cadena daw separada por espacios es: " + daw.split(" ", 2));
+      // trim(<cadena>): extrae los caracteres de la cadena eliminando los espacios del principio y del final.
+      console.log(
+        "La cadena sin espacios quedaría: \n" +
+          "             Hola, caracola               ".trim()
+      );
+
+      // Mayúsculas y minúsculas
+      // toLowerCase(): devuelve la cadena en minúsculas:
+      console.log(daw.toLowerCase());
+      // toUpperCase(): devuelve la cadena en mayúsculas:
+      console.log(daw.toUpperCase());
+
+      // Métodos especiales:
+      // toString: devuelve el valor del objeto String.
+      // valueOf: devuelve el valor primitivo del objeto.
+    </script>
+  </body>
+</html>

@@ -13,7 +13,7 @@
 
       // Creación de fecha actual:
       let actual = new Date();
-      alert(actual);
+      console.log(actual);
 
       // Creación de fecha con cadenas:
       let d1 = new Date("Wed Mar 25 2015 09:23:45 GMT +0100 (W. Europe Standard Time)"); // Ignora si el día de la semana está mal o los paréntesis
@@ -27,36 +27,36 @@
       let d8 = new Date("2016-05"); //El día se sustiye por 1
       let d9 = new Date("2016"); //El día y el mes se sustituyen por 1
       //¡OJO! Incluimos 0 en días/meses inferiores a 10
-      alert(d1);
-      alert(d2);
-      alert(d3);
-      alert(d4);
-      alert(d5);
-      alert(d6);
-      alert(d7);
-      alert(d8);
-      alert(d9);
+      console.log(d1);
+      console.log(d2);
+      console.log(d3);
+      console.log(d4);
+      console.log(d5);
+      console.log(d6);
+      console.log(d7);
+      console.log(d8);
+      console.log(d9);
 
       // Creación de fecha con milisegundos
       let dms = new Date(86400000);
-      alert("Fecha en ms: " + dms);
+      console.log("Fecha en ms: " + dms);
 
       // Creación de fechas con números
       let fechaLargo = new Date(2015, 11, 10, 14, 30, 25);
       let fechaCorto = new Date(2015, 11, 10);
-      alert("Fecha largo: " + fechaLargo + " Fecha corto: " + fechaCorto);
+      console.log("Fecha largo: " + fechaLargo + " Fecha corto: " + fechaCorto);
 
       let fecha = new Date();
-      alert("Fecha: " + fecha);
-      alert("toString: " + fecha.toString());
-      alert("toUTCString: " + fecha.toUTCString());
-      alert("toDateString: " + fecha.toDateString());
+      console.log("Fecha: " + fecha);
+      console.log("toString: " + fecha.toString());
+      console.log("toUTCString: " + fecha.toUTCString());
+      console.log("toDateString: " + fecha.toDateString());
 
       // Métodos get
       let fc = new Date("October 1, 2016 10:30:20");
-      alert(fc.getDay() + " " + fc.getDate() + "/" + fc.getMonth() + "/" + fc.getFullYear());
-      alert(fc.getHours() + ":" + fc.getMinutes() + ":" + fc.getSeconds() + ":" + fc.getMilliseconds());
-      alert("Ms desde 1/1/1970: " + fc.getTime());
+      console.log(fc.getDay() + " " + fc.getDate() + "/" + fc.getMonth() + "/" + fc.getFullYear());
+      console.log(fc.getHours() + ":" + fc.getMinutes() + ":" + fc.getSeconds() + ":" + fc.getMilliseconds());
+      console.log("Ms desde 1/1/1970: " + fc.getTime());
 
       // Métodos set
       fc.setDate(31);
@@ -67,11 +67,11 @@
       fc.setSeconds(59);
       fc.setMilliseconds(59);
       // fc.setTime(<ms>); //Modificaríamos la fecha y la hora contando los milisegundos desde el 1/1/1970
-      alert(fc.toString());
+      console.log(fc.toString());
 
       // Ejemplo de cálculo de horas
       fc.setMonth(fc.getMonth() + 3);
-      alert(fc.toString());
+      console.log(fc.toString());
     </script>
   </body>
 </html>

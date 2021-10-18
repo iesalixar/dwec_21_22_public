@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Objetos nativos. Math</title>
+  </head>
+
+  <body>
+    <script>
+      /* Características:
+		- Permite realizar operaciones matemáticas.
+		- No es un constructor: NO usamos var x = new Math();
+		- Ej: var pi = Math.PI; var raiz = Math.sqrt(36); */
+
+      // Propiedades:
+      // E, LN2, LN10, LOG2E, LOG10E, PI, SQRT1_2, SQRT2
+      let pi = Math.PI;
+      console.log("El número PI vale: " + pi);
+
+      // Métodos más comunes:
+      // random(): Devuelve un número aleatorio entre 0 y 1
+      console.log("Número aleatorio: " + Math.random());
+
+      // max(<lista de valores>) // min (<lista de valores>)
+      console.log("Máximo de valores: " + Math.max(1, 5, 3, 9, 6));
+      console.log("Mínimo de valores: " + Math.min(1, 5, 3, 9, 6));
+
+      // round(<número>): redondeo al alza o a la baja
+      let a = 4.3;
+      let b = 4.7;
+      let c = 4.5;
+      console.log("Redondeo de " + c + " es: " + Math.round(c));
+
+      // ceil(<número>): redondea siempre al alza:
+      console.log("Redondeo de " + a + " es: " + Math.ceil(a));
+
+      // floor(<número>): redondea siempre a la baja:
+      console.log("Redondeo de " + b + " es: " + Math.floor(b));
+
+      // Número aleatorio entre 0 y 10:
+      let aleatorio = Math.floor(Math.random() * 11);
+      console.log("Aleatorio es: " + aleatorio);
+
+      // pow(<base>,<exponente>): devuelve el valor de la potencia
+      console.log("La potencia de 3 al cuadrado es: " + Math.pow(3, 2));
+
+      // sqrt(<numero>): devuelve la raíz del número:
+      console.log("Raíz de 36 es: " + Math.sqrt(36));
+
+      // abs(<número>): devuelve el valor absoluto de un número
+      console.log("Valor absoluto de -5: " + Math.abs(-5));
+
+      // Métodos trigonmétricos:
+      // sin, cos, tan, asin, acos, atan, atan2
+    </script>
+  </body>
+</html>
