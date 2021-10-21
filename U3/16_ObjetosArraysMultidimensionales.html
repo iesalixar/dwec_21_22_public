@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays multidimensionales</title>
+  </head>
+  <body>
+    <h1 id="data"></h1>
+    <script>
+      // Arrays con más de una dimensión
+      // 1) Declaramos un array. Podemos hacerlo sin especificar su tamaño
+      let array1 = [];
+
+      // 2) Para cada uno de los elementos, podemos inicializarlos con los
+      // sucesivos arrays
+      array1[0] = [1, 2, 3];
+      array1[1] = [4, 5, 6];
+      array1[2] = [7, 8, 9];
+
+      // Recorrer el array
+      for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array1[i].length; j++) {
+          document.getElementById("data").innerHTML += array1[i][j] + " ";
+          console.log(array1[i][j]);
+        }
+        document.getElementById("data").innerHTML += "<br>";
+      }
+
+      document.getElementById("data").innerHTML += "<br><br>";
+
+      // Otra forma de inicializarlo (como objeto Array)
+      let array2 = new Array();
+      array2[0] = ["a", "b", "c"];
+      array2[1] = ["d", "e", "f"];
+      array2[2] = ["g", "h", "i"];
+
+      for (let i = 0; i < array2.length; i++) {
+        for (let j = 0; j < array2[i].length; j++) {
+          document.getElementById("data").innerHTML += array2[i][j] + " ";
+          console.log(array2[i][j]);
+        }
+        document.getElementById("data").innerHTML += "<br>";
+      }
+
+      document.getElementById("data").innerHTML += "<br><br>";
+
+      // Podemos rellenar a posteriori
+      let array3 = [];
+      let filas = 3;
+      let columnas = 5;
+      let contador = 100;
+      for (let i = 0; i < filas; i++) {
+        array3[i] = [];
+        for (let j = 0; j < columnas; j++) {
+          array3[i][j] = contador++;
+          document.getElementById("data").innerHTML += array3[i][j] + " ";
+        }
+        document.getElementById("data").innerHTML += "<br>";
+      }
+    </script>
+  </body>
+</html>
