@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Objetos. Métodos</title>
+  </head>
+
+  <body>
+    <script>
+      /*Sintaxis de creación de métodos de un objeto:
+  <nombre_método> : function() {
+    //Instrucciones
+  } 
+
+  Sintaxis de acceso a métodos de un objeto:
+  <nombre_objeto>.<nombre_método>(); */
+
+      let persona1 = {
+        nombre: "Ada",
+        apellido: "Lovelace",
+        nombreCompleto: function () {
+          return this.nombre + " " + this.apellido;
+        },
+      };
+      console.log(persona1.nombre);
+      console.log(persona1.apellido);
+      console.log(persona1.nombreCompleto());
+
+      for (x in persona1) {
+        console.log(persona1[x]);
+      }
+    </script>
+  </body>
+</html>
