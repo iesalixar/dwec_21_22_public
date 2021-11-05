@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<h3>Formulario</h3>
+		<form action="pagina.php" method="post">
+			<!-- action: es la url de la página a la que redirige el formulario.
+            method: puede ser POST o GET, dependiendo del enmascaramiento de los 
+            datos enviados. -->
+
+			<!-- Elementos -->
+		</form>
+
+		<form>
+			<!-- Cuadro de texto. Ejemplo: -->
+			<input type="text" name="nombre" />
+			<br />
+			<!-- Cuadro de texto. Ejemplo: -->
+			<input type="password" name="contrasena" />
+			<br />
+			<!-- Campo oculto. Ejemplo: -->
+			<input type="hidden" name="campoOculto" value="valor" />
+			<br />
+			<!-- Casilla de verificación. Ejemplo: -->
+			<p>Frutas</p>
+			<input name="fresa" type="checkbox" value="fresa" />Fresa<br />
+			<input name="platano" type="checkbox" value="platano" />Plátano <br />
+			<input name="manzana" type="checkbox" value="manzana" />Manzana <br />
+
+			<!-- Radio button. Ejemplo: -->
+			<p>Frutas</p>
+			<input name="fruta" type="radio" value="fresa" />Fresa<br />
+			<input name="fruta" type="radio" value="platano" />Plátano <br />
+			<input name="fruta" type="radio" value="manzana" />Manzana <br />
+
+			<br />
+			  
+			<!-- Botón de envío. Ejemplo: -->
+			<input name="enviar" type="submit" value="Enviar formulario" />
+			<!-- Botón de reset. Ejemplo: -->
+			<input name="enviar" type="reset" value="Borrar formulario" />
+			<!-- Botón de imagen. Ejemplo: -->
+			<br />
+			<input name="enviar" type="image" src="imagen.jpg" />
+			<!-- Botón. Ejemplo: -->
+			<br />
+			<input name="enviar" type="button" value="Botón de prueba" />
+			<br />
+			<!-- Selector de ficheros. Ejemplo. Fichero adjunto:  -->
+			<input type="file" name="fichero" />
+
+			<br />
+			<!-- Label. Ejemplo: -->
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" />
+
+			<br />
+			<!-- Textarea. Ejemplo: -->
+			<textarea name="comentarios" rows="4" cols="30"></textarea>
+
+			<br />
+			<!-- Desplegable. Ejemplo: -->
+			<p>Comida: </p>
+			<select name="comida">
+				<option>Pasta</option>
+				<option>Carne</option>
+				<option>Pescado</option>
+				<option>Postre</option>
+			</select>
+
+			<!-- Desplegable con elección múltiple. Ejemplo: -->
+			<p>Comida: </p>
+			<select multiple size="3" name="comida">
+				<option value="pasta">Pasta</option>
+				<option value="carne">Carne</option>
+				<option value="pescado">Pescado</option>
+				<option value="postre">Postre</option>
+			</select>
+
+			<fieldset>
+				        
+				<legend>Datos:</legend>
+				        Nombre: <input type="text" size="30" /><br />
+				        Email: <input type="text" size="30" /><br />
+				    
+			</fieldset>
+		</form>
+	</body>
+</html>

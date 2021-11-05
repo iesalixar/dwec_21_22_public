@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Formulario</h1>
+    <form action="procesar.php" method="post">
+        <table>
+            <tr>
+                <td>Nombre: </td>
+                <td><input type="text" name="nombre" /></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="password" name="psw" /></td>
+            </tr>
+            <tr>
+                <td>Sexo : </td>
+                <td>
+                    <input type="radio" name="sexo" value="H" checked /> Hombre
+                    <input type="radio" name="sexo" value="M" /> Mujer
+                </td>
+            </tr>
+            <tr>
+                <td>Mayor de 18:</td>
+                <td><input type="checkbox" name="mayor" checked /></td>
+            </tr>
+            <tr>
+                <td>Fichero: </td>
+                <td><input type="file" name="upfile" /></td>
+            </tr>
+            <tr>
+                <td>Hidden: </td>
+                <td><input type="hidden" name="escondido" value="sorpresa" /></td>
+            </tr>
+        </table>
+        <tr>
+            <td>Comida: </td>
+            <td>
+                <select name="comida">
+                    <option value="pasta">Pasta</option>
+                    <option value="carne">Carne</option>
+                    <option value="pescado">Pescado</option>
+                    <option value="postre">Postre</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Bebidas: </td>
+            <td>
+                <select multiple size="3" name="bebida[]">
+                    <option value="agua">Agua</option>
+                    <option value="vino">Vino</option>
+                    <option value="cerveza">Cerveza</option>
+                </select>
+            </td>
+        </tr>
+        </table>
+        <p>
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Borrar" />
+
+        </p>
+    </form>
+</body>
+
+</html>
