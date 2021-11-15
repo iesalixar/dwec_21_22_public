@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios - Eventos</title>
+  </head>
+  <style>
+    #div_form {
+      display: block;
+    }
+  </style>
+  <body>
+    <form id="formularioBusquedaId" name="formularioBusquedaName" action="siguiente.php">
+      <div id="div_form">
+        <div id="div_buscar">
+          <input type="text" name="cEntrada" id="entrada" />
+          <input type="submit" name="enviar" id="enviar" value="Buscar..." />
+        </div>
+        <input type="text" name="nombre_txt" id="nombre_txt" />
+
+        <div id="div_checkbox">
+          <label for="cantidad">El checkbox:</label>
+          <input type="checkbox" id="cantidad" name="cantidad" value="100" />
+        </div>
+
+        <div id="div_radiobutton">
+          <fieldset>
+            <legend>Frutas</legend>
+            <input name="frutas" type="radio" value="fresa" id="fresa" />
+            <label for="fresa">Fresa</label>
+            <input name="frutas" type="radio" value="platano" id="platano" /> 
+            <label for="platano">Plátano</label>
+            <input name="frutas" type="radio" value="manzana" id="manzana" />
+            <label for="manzana">Manzana</label>
+          </fieldset>
+        </div>
+
+        <select name="comida">
+          <option value="pa">Pasta</option>
+          <option value="ca">Carne</option>
+          <option value="pe">Pescado</option>
+          <option value="po">Postre</option>
+        </select>
+        <input type="text" name="nombre" id="nombre" value="Chema" onclick="identificar(this)" />
+        <input type="text" name="nombre" id="nombre" value="Fran" onclick="identificar(this)" />
+      </div>
+    </form>
+  </body>
+  <script>
+    let formularios = document.forms["formularioBusquedaName"];
+    // console.log(formularios);
+    let elementos = formularios.elements;
+    // console.log(elementos);
+
+    console.log(document.getElementById("entrada"));
+    console.log(document.formularioBusquedaName.cEntrada);
+    console.log(document.formularioBusquedaName.elements[0]);
+    console.log(document.forms["formularioBusquedaName"].elements["cEntrada"]);
+    console.log(document.forms["formularioBusquedaName"].cEntrada);
+
+    // Cambia el valor del texto
+    document.getElementById("nombre_txt").value = "Valor nuevo";
+
+    // Marca el checked
+    document.getElementById("cantidad").checked = true;
+
+    for (let i = 0; i < document.formularioBusquedaName.frutas.length; i++) {
+      // Comprueba que es true
+      if (document.formularioBusquedaName.frutas[i].checked)
+        console.log(document.formularioBusquedaName.frutas[i].value);
+    }
+
+    // Objetos select
+    // La propiedad selectedIndex devuelve el índice de la opción que ha sido seleccionada
+    console.log(formularioBusquedaName.comida.selectedIndex);
+    console.log(formularioBusquedaName.comida.options[1].text); // Devuelve "Carne"
+    console.log(formularioBusquedaName.comida.options[1].value); // Devuelve "ca"
+    function identificar(objeto) {
+      //console.log(objeto);
+      let nombre = objeto.name;
+      let valor = objeto.value;
+      let id = objeto.id;
+      let tipo = objeto.type;
+      console.log(objeto);
+    }
+  </script>
+</html>
