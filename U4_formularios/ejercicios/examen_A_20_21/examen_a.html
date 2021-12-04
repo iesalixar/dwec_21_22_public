@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script defer src="examen_a.js"></script>
+		<title>U3 - Examen A</title>
+	</head>
+	<style>
+		fieldset {
+			width: 350px;
+			border: solid #306;
+		}
+
+		label {
+			width: 150px;
+			float: left;
+			margin-bottom: 5px;
+		}
+
+		input,
+		select {
+			width: 150px;
+			float: left;
+			margin-bottom: 5px;
+		}
+
+		.error {
+			border: solid 2px #ff0000;
+		}
+
+		.correcto {
+			border: solid 2px #0cd801;
+		}
+	</style>
+	<body>
+		<fieldset>
+			<form name="formulario" id="formulario" action="http://www.google.es" method="get">
+				<label for="nombre">Nombre modelo:</label>
+				<input type="text" name="nombre" id="nombre" />
+
+				<label for="tipo_modelo">Tipo modelo:</label>
+				<select name="tipo_modelo" id="tipo_modelo">
+					<option value="0" selected="selected">Seleccione modelo</option>
+					<option value="TE">Televisor</option>
+					<option value="FR">Frigorífico</option>
+					<option value="LA">Lavadora</option>
+					<option value="MI">Microondas</option>
+					<option value="LV">Lavavajillas</option>
+				</select>
+
+				<label for="fecha">Fecha:</label>
+				<input name="fecha" type="text" id="fecha" maxlength="4" />
+
+				<label for="consumo">Consumeo energético:</label>
+				<input name="consumo" type="text" id="consumo" />
+
+				<label for="referencia">Referencia del modelo:</label>
+				<input name="referencia" type="text" id="referencia" />
+
+				<label for="password">Password:</label>
+				<input name="password" type="password" id="password" />
+
+				<input type="submit" name="Enviar" id="enviar" value="Enviar" />
+			</form>
+		</fieldset>
+		<div id="errores"></div>
+	</body>
+</html>
