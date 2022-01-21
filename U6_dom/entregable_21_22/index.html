@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="entregable_21_22.js"></script>
+
+    <title>Mega Descargador</title>
+  </head>
+  <body class="bg-light">
+    <h1>Hola!</h1>
+    <nav
+      class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark"
+      aria-label="Main navigation"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Mega Descargador</a>
+        <button
+          class="navbar-toggler p-0 border-0"
+          type="button"
+          id="navbarSideCollapse"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="navbar-collapse offcanvas-collapse justify-content-center"
+          id="navbarsExampleDefault"
+        >
+          <form class="d-flex w-75 p-1">
+            <div class="input-group">
+              <input
+                type="text"
+                id="buscar"
+                class="form-control"
+                placeholder="Buscar"
+                aria-label="Buscar"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-success"
+                type="submit"
+                id="button-addon2"
+              >
+                Buscar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-scroller bg-body shadow-sm">
+      <nav class="nav nav-underline" aria-label="Secondary navigation">
+        <a class="nav-link active" aria-current="page" href="#"
+          >Películas
+          <span class="badge bg-light text-dark rounded-pill align-text-bottom"
+            >1851</span
+          >
+        </a>
+
+        <a class="nav-link" href="#">
+          Series
+          <span class="badge bg-light text-dark rounded-pill align-text-bottom"
+            >27</span
+          >
+        </a>
+        <a class="nav-link" href="#"
+          >Libros
+          <span class="badge bg-light text-dark rounded-pill align-text-bottom"
+            >77000</span
+          >
+        </a>
+      </nav>
+    </div>
+    <main id="main" class="container"></main>
+  </body>
+</html>
