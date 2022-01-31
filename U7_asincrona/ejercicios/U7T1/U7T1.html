@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>00_Ajax-HolaMundo</title>
+
+  <script>
+    window.onload = inicio;
+
+    function inicio() {
+      document.getElementById("txt_area").value = "";
+      document.getElementById("url").value = window.location.href;
+      document.getElementById("mostrar").addEventListener("click", descarga_archivo);
+    }
+
+    function descarga_archivo() {
+
+      // Obtener la instancia del objeto XMLHttpRequest
+      if (window.XMLHttpRequest) {
+        peticion_http = new XMLHttpRequest();
+
+        // Indicamos a qué función se debe llamar cuando cambie el estado de la petición
+        peticion_http.onreadystatechange = muestra_contenido;
+        // Configuramos el método y la URL a la que vamos a hacer la petición
+        peticion_http.open(
+          "GET",
+          document.getElementById("url").value
+        );
+        // Realizar petición HTTP. Get sin envío de parámetros
+        peticion_http.send();
+      } else {
+        alert("No tienes soporte para AJAX");
+      }
+    }
+
+    function muestra_contenido() {
+      console.log(peticion_http.readyState)
+      if (peticion_http.readyState === 4 && peticion_http.status === 200) {
+        // Ha recibido una respuesta...y es válida y correcta
+        document.getElementById("txt_area").value = peticion_http.responseText
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div>
+    <input type="text" id="url" style="min-width: 300px" />
+  </div>
+  <div>
+    <input type="button" id="mostrar" value="Mostrar contenido" />
+  </div>
+  <div>
+    <textarea id="txt_area" style="min-width: 600px; min-height: 500px"></textarea>
+  </div>
+
+</body>
+
+</html>
