@@ -17,14 +17,16 @@ let objeto1 = {
   pais: "España",
 };
 
-// Acceso: utilizamos la notación punto o corchetes
-console.log(objeto1.nombre + " : " + objeto1.nacimiento + " : " + objeto1.pais);
-// console.log(objeto1["nombre"]+" : "+objeto1["nacimiento"]+" : "+objeto1["pais"]);
+// Acceso: utilizamos la notación punto o corchetes (son equivalentes)
+console.log(`${objeto1.nombre}:${objeto1.nacimiento}:${objeto1.pais}`);
+console.log(`${objeto1["nombre"]}:${objeto1["nacimiento"]}:${objeto1["pais"]}`);
 
 // Recorrer los nombres de un objeto
 for (let x in objeto1) {
-  document.getElementById("resultado").innerHTML +=
-    x + ":" + objeto1[x] + "<br/>";
+  let node_text = document.createTextNode(`${x}:${objeto1[x]}`);
+  let node_br = document.createElement("br");
+  document.getElementById("resultado").appendChild(node_text);
+  document.getElementById("resultado").appendChild(node_br);
 }
 
 // Objetos que contienen otros objetos
@@ -41,36 +43,40 @@ let objeto2 = {
 
 // Acceso a un objeto dentro de otro objeto
 let y = objeto2.hijos.hijo1; //objeto2.hijos["hijo1"];
-alert("Hijo 1 es " + y);
+console.log(`Hijo 1 es ${y}`);
 
 // ARRAYS: nombre del array, y entre corchetes los valores
 let hijos = {
   hijos: ["Pepito Durán", "Juanita Durán", "Ramiro Durán"],
 };
 let objeto3 = {
-  nombre: "Ada",
-  nacimiento: 1815,
-  pais: "Reino Unido",
+  nombre: "Chema",
+  nacimiento: 1982,
+  pais: "España",
   hijos: ["Pepito Durán", "Juanita Durán", "Ramiro Durán"],
 };
 
 // Acceso
 let z = objeto3.hijos[1];
-alert("Hijo 2 es " + z);
+console.log(`Hijo 2 es ${z}`);
 
 // Recorrer los elementos de un array
 let z1 = "";
 for (let i in objeto3.hijos) {
-  z1 += objeto3.hijos[i] + ", ";
+  z1 += `${objeto3.hijos[i]}, `;
 }
-document.getElementById("resultado").innerHTML +=
-  "Todos los hijos: " + z1 + "<br/>";
+
+let node_text = document.createTextNode(`Todos los hijos:${z1} `);
+let node_br = document.createElement("br");
+document.getElementById("resultado").appendChild(node_text);
+document.getElementById("resultado").appendChild(node_br);
 
 let z2 = "";
 for (let i = 0; i < objeto3.hijos.length; i++) {
-  z2 += objeto3.hijos[i];
+  z2 += `${objeto3.hijos[i]}, `;
 }
-document.getElementById("resultado").innerHTML +=
-  "Todos los hijos: " + z2 + "<br/>";
 
-// Si queremos borrar elementos de un objeto utilizamos "delete"
+node_text = document.createTextNode(`Todos los hijos:${z2} `);
+node_br = document.createElement("br");
+document.getElementById("resultado").appendChild(node_text);
+document.getElementById("resultado").appendChild(node_br);
