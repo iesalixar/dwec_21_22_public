@@ -22,7 +22,7 @@ function mostrar_nombre(e) {
         document.getElementById("sugerencia").innerHTML = xhr.responseText;
       }
     };
-    xhr.open("GET", "arraynombres.php?nombre=" + cadena, true);
+    xhr.open("GET", "arraynombres_get.php?nombre=" + cadena);
     xhr.send();
   }
 }

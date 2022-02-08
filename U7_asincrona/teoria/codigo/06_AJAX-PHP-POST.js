@@ -2,7 +2,7 @@ let READY_STATE_COMPLETE = 4;
 let HTTP_STATUS_OK = 200;
 window.onload = inicio;
 
-// let xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+// let xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
 // let theUrl = "/json-handler";
 // xmlhttp.open("POST", theUrl);
 // xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -27,10 +27,10 @@ function mostrar_nombre(e) {
         document.getElementById("sugerencia").innerHTML = this.responseText;
       }
     };
-    xhr.open("POST", "arraynombres.php");
+    xhr.open("POST", "arraynombres_post.php");
     xhr.setRequestHeader("Content-type", "application/json");
-    let dato = { 
-      "alumno": cadena 
+    let dato = {
+      alumno: cadena,
     };
     let cadena_formato_json = JSON.stringify(dato);
     xhr.send(cadena_formato_json);
