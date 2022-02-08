@@ -2,12 +2,6 @@ let READY_STATE_COMPLETE = 4;
 let HTTP_STATUS_OK = 200;
 window.onload = inicio;
 
-// let xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-// let theUrl = "/json-handler";
-// xmlhttp.open("POST", theUrl);
-// xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-// xmlhttp.send(JSON.stringify({ "email": "hello@user.com", "response": { "name": "Tester" } }));
-
 function inicio() {
   document.getElementById("nombre").addEventListener("keyup", mostrar_nombre);
 }
