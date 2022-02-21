@@ -1,0 +1,28 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 5px;
+}
+.titulo {
+  font-weight: bold;
+}
+
+.director {
+  font-style: italic;
+}
+
+.rojo {
+  color: red;
+}
+.amarillo {
+  color: rgb(197, 197, 0);
+}
+.verde {
+  color: green;
+}

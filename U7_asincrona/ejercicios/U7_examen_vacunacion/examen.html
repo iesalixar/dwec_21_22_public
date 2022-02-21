@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="examen_vacunacion.js"></script>
+  <link type="text/css" rel="stylesheet" href="examen_vacunacion.css">
+  <title>Examen vacunación</title>
+</head>
+<body>
+  <label>CC.AA.: </label>
+  <select id="ccaa"></select>
+  <label>D. Entregadas: </label>
+  <input type="number" id="d_entregadas" />
+  <label>D. Admin.: </label>
+  <input type="number" id="d_admin" />
+  <label>D. Completa: </label>
+  <input type="number" id="d_completa" />
+  <label>P. Entregadas: </label>
+  <input type="number" step="0.01" id="p_entregadas" />
+  <label>P. Admin: </label>
+  <input type="number" step="0.01" id="p_admin" />
+  <label>P. Completa: </label>
+  <input type="number" step="0.01" id="p_completa" />
+
+  <button id="enviar">Modificar datos</button>
+
+  <hr />
+  <div>
+    <label>Resultados </label>
+    <div id="resultados"></div>
+  </div>
+  <hr />
+
+  <div id="texto">
+    <h1>Tabla de vacunacion</h1>
+    <button id="carga_datos_vacunacion_xml">
+      Cargar datos vacunación (XMLHttpRequest)
+    </button>
+    <button id="carga_datos_vacunacion_fetch">
+      Cargar datos vacunación (Fetch)
+    </button>
+  </div>
+  <table id="tabla_resultados"></table>
+</body>
+</html>
